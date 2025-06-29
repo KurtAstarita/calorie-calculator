@@ -8,8 +8,7 @@
     </head>
 <body>
 
-    <div class="calculator-container">
-        <h3>Calorie Calculator</h3>
+    <div class="calculator-box"> <h3>Calorie Calculator</h3>
 
         <div class="form-group">
             <label for="gender-calorie">Gender:</label>
@@ -27,8 +26,8 @@
 
         <div class="form-group">
             <label for="weight-calorie">Weight:</label>
-            <input type="number" id="weight-calorie" placeholder="e.g., 180" min="1">
-            <select id="weight-unit-calorie">
+            <input type="number" id="weight-calorie" placeholder="e.g., 180" min="1" class="input-with-unit">
+            <select id="weight-unit-calorie" class="unit-selector">
                 <option value="lbs">Pounds (lbs)</option>
                 <option value="kg">Kilograms (kg)</option>
             </select>
@@ -36,8 +35,8 @@
 
         <div class="form-group">
             <label for="height-calorie">Height:</label>
-            <input type="number" id="height-calorie" placeholder="e.g., 70" min="1">
-            <select id="height-unit-calorie">
+            <input type="number" id="height-calorie" placeholder="e.g., 70" min="1" class="input-with-unit">
+            <select id="height-unit-calorie" class="unit-selector">
                 <option value="inches">Inches</option>
                 <option value="cm">Centimeters</option>
             </select>
@@ -69,7 +68,7 @@
         </div>
 
         <button id="calculate-calories">Calculate Calories</button>
-        <p id="calorie-result"></p>
+        <p id="calorie-result" class="result-text"></p>
     </div>
 
     <script src="script.js"></script>
