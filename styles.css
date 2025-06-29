@@ -62,15 +62,134 @@ body {
     }
 }
 
-/* --- IMPORTANT NOTE FOR WEIGHT/HEIGHT INPUTS --- */
-/* Your original #protein-calculator CSS uses `display: block` and `width: 90%` for inputs/selects. */
-/* This means the weight/height input and its unit select (lbs/kg) will appear on separate lines. */
-/* If you want them side-by-side, that requires ADDITIONAL CSS beyond your original set. */
-/* For now, I'm sticking to the *exact* replication, so they will be stacked. */
-
-/* Optional text styling for (Optional) - This was generic in your original CSS */
 .optional {
     font-size: 0.85em;
     color: #888;
     font-weight: normal;
 }
+
+
+/* ------------- Branding Container ------------------ */
+
+.branding-container {
+  text-align: center;
+  margin-top: 30px;
+  padding: 15px 0;
+  background-color: #f8f8f8;
+  border-top: 1px solid #eee;
+}
+
+.branding-container a {
+  text-decoration: none;
+  color: #007bff;
+  font-weight: 600;
+  padding: 8px 15px;
+  border: 1px solid #007bff;
+  border-radius: 5px;
+  background-color: white;
+  margin-left: 10px;
+}
+
+.branding-container span {
+  font-weight: 600;
+  margin-right: 10px;
+}
+
+/* Responsive adjustments for mobile */
+@media (max-width: 600px) {
+  .branding-container {
+    margin-top: 20px;
+    padding: 10px 0;
+    display: flex; /* Use flexbox for layout control */
+    flex-direction: column; /* Stack text and link vertically */
+    align-items: center; /* Center items horizontally */
+  }
+
+  .branding-container a {
+    font-size: 0.9em;
+    padding: 6px 10px;
+    margin-left: 0; /* Remove left margin */
+    margin-top: 10px; /* Add top margin for spacing */
+  }
+
+  .branding-container span {
+    font-size: 0.9em;
+    margin-right: 0; /* Remove right margin */
+  }
+}
+
+/* Responsive adjustments for tablet (optional) */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .branding-container {
+    margin-top: 25px;
+    padding: 12px 0;
+  }
+
+  .branding-container a {
+    font-size: 1em;
+    padding: 7px 12px;
+  }
+
+  .branding-container span {
+    font-size: 1em;
+  }
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  border-top: 1px solid #eee;
+  font-size: 0.9em; /* Slightly smaller font size */
+  color: #666; /* Darker grey color */
+}
+
+footer a {
+  text-decoration: none;
+  color: #007bff;
+}
+
+/* -------------------------- Social Share Styles --------------------------- */
+
+.social-share {
+  margin-top: 1em;
+  padding: 1em;
+  border: 1px solid #eee;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.social-share h3 {
+  margin-top: 0;
+  color: #333;
+  font-size: 1.2em;
+  margin-bottom: 0.5em;
+}
+
+.social-share ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: inline-block;
+}
+
+.social-share li {
+  display: inline-block;
+  margin: 0 0.5em;
+}
+
+.social-share li a {
+  display: block;
+}
+
+.social-share img {
+  width: 32px; /* Adjust size as needed */
+  height: 32px;
+  border-radius: 5px; /* Optional: circular icons */
+  transition: transform 0.2s ease-in-out;
+}
+
+.social-share img:hover {
+  transform: scale(1.1);
+}
+
