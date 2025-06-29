@@ -1,25 +1,22 @@
-/* Basic body styling for centering the calculator on the page */
+/* Basic body styling - REMOVED FLEXBOX, now just for font and background */
 body {
     font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh; /* Ensures content takes at least full screen height */
     margin: 0;
-    background-color: #fff; /* Light background */
+    background-color: #fff; /* Keeping this as white, based on your confirmation */
+    display: block; /* Ensure body behaves as a block container again */
 }
 
-/* Main calculator container styling - DIRECTLY COPIED AND RENAMED ID */
+/* Main calculator container styling */
 #calorie-calculator { /* TARGETING THE CALORIE CALCULATOR ID */
     border: 1px solid #ccc;
     padding: 20px;
-    margin: 20px auto;
+    margin: 20px auto; /* This centers the block-level element horizontally */
     max-width: 90%;
     width: 300px;
     text-align: center;
 }
 
-/* Styling for labels, inputs, selects, and buttons - DIRECTLY COPIED AND RENAMED ID */
+/* Styling for labels, inputs, selects, and buttons */
 #calorie-calculator label,
 #calorie-calculator input[type="number"],
 #calorie-calculator select,
@@ -38,13 +35,13 @@ body {
     text-align: center;
 }
 
-/* Styling for the result paragraph - DIRECTLY COPIED AND RENAMED ID */
+/* Styling for the result paragraph */
 #calorie-result {
     margin-top: 10px;
     font-weight: bold;
 }
 
-/* Responsive adjustments for mobile - DIRECTLY COPIED AND RENAMED ID */
+/* Responsive adjustments for mobile */
 @media (max-width: 600px) {
     #calorie-calculator {
         padding: 15px;
@@ -62,6 +59,8 @@ body {
     }
 }
 
+
+/* Optional text styling for (Optional) */
 .optional {
     font-size: 0.85em;
     color: #888;
