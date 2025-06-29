@@ -1,131 +1,76 @@
-/* Basic body styling (keeping this for centering/background if it's a standalone page) */
+/* Basic body styling for centering the calculator on the page */
 body {
     font-family: Arial, sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh; /* Ensure it takes full viewport height */
+    min-height: 100vh; /* Ensures content takes at least full screen height */
     margin: 0;
     background-color: #f4f4f4; /* Light background */
 }
 
-/* Base styles for ANY calculator container (protein or calorie) */
-/* We'll use a class for common styling across calculators */
-.calculator-box { /* NEW CLASS NAME for shared styles */
+/* Main calculator container styling - DIRECTLY COPIED AND RENAMED ID */
+#calorie-calculator { /* TARGETING THE CALORIE CALCULATOR ID */
     border: 1px solid #ccc;
     padding: 20px;
     margin: 20px auto;
     max-width: 90%;
     width: 300px;
     text-align: center;
-    background-color: #fff; /* Add a white background for content */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-    border-radius: 8px; /* Slightly rounded corners */
 }
 
-.calculator-box label,
-.calculator-box input[type="number"],
-.calculator-box select,
-.calculator-box button {
+/* Styling for labels, inputs, selects, and buttons - DIRECTLY COPIED AND RENAMED ID */
+#calorie-calculator label,
+#calorie-calculator input[type="number"],
+#calorie-calculator select,
+#calorie-calculator button {
     display: block;
-    margin: 5px auto; /* Centers the elements within the calculator-box */
-    width: 90%; /* Standard width for inputs/selects */
-    box-sizing: border-box; /* Ensures padding/border are included in the width */
+    margin: 5px auto;
+    width: 90%;
 }
 
-.calculator-box label {
+#calorie-calculator label {
     text-align: left;
-    font-weight: bold; /* Make labels bold for readability */
-    margin-bottom: 5px; /* Add small space below label */
 }
 
-.calculator-box input[type="number"],
-.calculator-box select {
+#calorie-calculator input[type="number"],
+#calorie-calculator select {
     text-align: center;
-    padding: 8px; /* Add some padding for better appearance */
-    border: 1px solid #ddd; /* Softer border */
-    border-radius: 4px; /* Slightly rounded input fields */
-    font-size: 1em; /* Standard font size */
 }
 
-/* Specific styling for the unit selectors to sit next to input fields */
-.calculator-box .unit-selector { /* Targeting the select elements next to weight/height */
-    display: inline-block;
-    width: auto; /* Shrink to fit content */
-    margin-left: 10px;
-    vertical-align: bottom; /* Align with the text input */
-}
-
-.calculator-box .input-with-unit { /* Targeting the number inputs next to unit selectors */
-    display: inline-block;
-    width: calc(90% - 70px); /* Adjust width to make space for the unit selector */
-    vertical-align: bottom;
-}
-
-/* Calculate button specific styling */
-.calculator-box button {
-    background-color: #007bff; /* Blue background */
-    color: white; /* White text */
-    padding: 10px 15px; /* Comfortable padding */
-    border: none; /* No border */
-    border-radius: 4px; /* Rounded corners */
-    cursor: pointer; /* Pointer on hover */
-    font-size: 1.1em; /* Slightly larger text */
-    margin-top: 20px; /* Space above button */
-    transition: background-color 0.2s ease; /* Smooth hover effect */
-}
-
-.calculator-box button:hover {
-    background-color: #0056b3; /* Darker blue on hover */
-}
-
-/* Result paragraph styling */
-.calculator-box .result-text { /* NEW CLASS NAME for result paragraph */
+/* Styling for the result paragraph - DIRECTLY COPIED AND RENAMED ID */
+#calorie-result {
     margin-top: 10px;
     font-weight: bold;
-    color: #333;
-    font-size: 1.1em;
 }
 
-/* Optional text styling */
+/* Responsive adjustments for mobile - DIRECTLY COPIED AND RENAMED ID */
+@media (max-width: 600px) {
+    #calorie-calculator {
+        padding: 15px;
+    }
+
+    #calorie-calculator label,
+    #calorie-calculator input[type="number"],
+    #calorie-calculator select,
+    #calorie-calculator button {
+        width: 95%;
+    }
+
+    #calorie-result {
+        font-size: 0.9em;
+    }
+}
+
+/* --- IMPORTANT NOTE FOR WEIGHT/HEIGHT INPUTS --- */
+/* Your original #protein-calculator CSS uses `display: block` and `width: 90%` for inputs/selects. */
+/* This means the weight/height input and its unit select (lbs/kg) will appear on separate lines. */
+/* If you want them side-by-side, that requires ADDITIONAL CSS beyond your original set. */
+/* For now, I'm sticking to the *exact* replication, so they will be stacked. */
+
+/* Optional text styling for (Optional) - This was generic in your original CSS */
 .optional {
     font-size: 0.85em;
     color: #888;
     font-weight: normal;
 }
-
-/* --- Media Queries for responsiveness --- */
-@media (max-width: 600px) {
-    .calculator-box {
-        padding: 15px;
-        width: 95%; /* Adjust width for smaller screens */
-    }
-
-    .calculator-box label,
-    .calculator-box input[type="number"],
-    .calculator-box select,
-    .calculator-box button {
-        width: 95%; /* Slightly larger width for elements on smaller screens */
-        margin: 5px auto; /* Re-center after width change */
-    }
-
-    .calculator-box .input-with-unit {
-        width: calc(95% - 60px); /* Adjust width for unit input on smaller screens */
-    }
-
-    .calculator-box .unit-selector {
-        margin-left: 5px; /* Reduce margin on smaller screens */
-    }
-
-    .calculator-box .result-text {
-        font-size: 0.9em;
-    }
-}
-
-
-/* Existing social share, branding, and footer styles (keep these as is if they are present) */
-/* (Not included here to keep it concise, but assume they remain) */
-
-/* .branding-container { ... } */
-/* .social-share { ... } */
-/* footer { ... } */
