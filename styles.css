@@ -1,0 +1,146 @@
+/* Basic body styling for centering the calculator */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f4f4f4;
+}
+
+/* Calculator container styling */
+.calculator-container { /* Changed from #protein-calculator */
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 90%;
+    width: 300px;
+    text-align: center;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.calculator-container h3 {
+    margin-top: 0;
+    color: #333;
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+/* Form group for spacing labels and inputs */
+.form-group {
+    margin-bottom: 15px; /* Spacing between form rows */
+    text-align: left; /* Align labels to the left within the form group */
+}
+
+/* Styling for labels, inputs, selects, and buttons */
+.calculator-container label,
+.calculator-container input[type="number"],
+.calculator-container select,
+.calculator-container button {
+    display: block; /* Each on its own line */
+    margin: 5px 0; /* Adjust margin for spacing */
+    width: 100%; /* Full width within the container */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+.calculator-container label {
+    text-align: left; /* Ensure labels are left-aligned */
+    font-weight: bold;
+    margin-bottom: 5px; /* Space between label and input */
+    font-size: 0.95em;
+    color: #555;
+}
+
+/* Specific styling for inputs and selects */
+.calculator-container input[type="number"],
+.calculator-container select {
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1em;
+    text-align: center; /* Text in input/select centered */
+}
+
+/* Adjustments for unit select boxes to sit next to input */
+.form-group select[id$="-unit-calorie"] { /* Targets select elements ending with -unit-calorie */
+    display: inline-block; /* Allows it to sit next to the input */
+    width: auto; /* Shrink to content */
+    margin-left: 10px; /* Space from the input */
+    vertical-align: bottom; /* Align with input */
+}
+
+.form-group input[id^="weight-"],
+.form-group input[id^="height-"] {
+    display: inline-block; /* Allow weight/height input to sit next to unit select */
+    width: calc(100% - 70px); /* Adjust width to make space for the select */
+    vertical-align: bottom; /* Align with select */
+}
+
+
+/* Styling for the Calculate button */
+.calculator-container button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1.1em;
+    margin-top: 20px; /* Space above the button */
+    transition: background-color 0.2s ease;
+}
+
+.calculator-container button:hover {
+    background-color: #0056b3;
+}
+
+/* Styling for the result paragraph */
+#calorie-result {
+    margin-top: 20px;
+    font-weight: bold;
+    color: #333;
+    font-size: 1.1em;
+    padding: 10px;
+    border: 1px solid #eee;
+    background-color: #f9f9f9;
+    border-radius: 4px;
+}
+
+/* Optional text styling */
+.optional {
+    font-size: 0.85em;
+    color: #888;
+    font-weight: normal;
+}
+
+
+/* Responsive adjustments for mobile */
+@media (max-width: 600px) {
+    .calculator-container {
+        padding: 15px;
+        width: 95%; /* Adjust width for smaller screens */
+    }
+
+    .calculator-container label,
+    .calculator-container input[type="number"],
+    .calculator-container select,
+    .calculator-container button {
+        width: 100%; /* Full width */
+    }
+
+    .form-group input[id^="weight-"],
+    .form-group input[id^="height-"] {
+        width: calc(100% - 60px); /* Smaller adjustment for mobile */
+    }
+
+    .form-group select[id$="-unit-calorie"] {
+        margin-left: 5px; /* Less margin on mobile */
+    }
+
+    #calorie-result {
+        font-size: 1em;
+    }
+}
