@@ -71,6 +71,6 @@ body {
 /* Optional text styling for (Optional) - This was generic in your original CSS */
 .optional {
     font-size: 0.85em;
-    color: #888;
+    color: #fff;
     font-weight: normal;
 }
