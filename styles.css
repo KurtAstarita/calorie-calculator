@@ -6,7 +6,7 @@ body {
     align-items: center;
     min-height: 100vh; /* Ensures content takes at least full screen height */
     margin: 0;
-    background-color: #f4f4f4; /* Light background */
+    background-color: #fff; /* Light background */
 }
 
 /* Main calculator container styling - DIRECTLY COPIED AND RENAMED ID */
@@ -71,6 +71,6 @@ body {
 /* Optional text styling for (Optional) - This was generic in your original CSS */
 .optional {
     font-size: 0.85em;
-    color: #fff;
+    color: #888;
     font-weight: normal;
 }
